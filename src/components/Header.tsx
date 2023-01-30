@@ -18,14 +18,14 @@ export function Header() {
         <div>
           <img src={Logo} alt="Logo da blorgr" />
         </div>
-        <nav className="flex items-center gap-5">
+        <nav className="flex items-center gap-5 md:hidden">
           <ItemHeader title="Product" itemsDropdown={itemsDropdownProduct} />
           <ItemHeader title="Company" itemsDropdown={itemsDropdownCompany} />
           <ItemHeader title="Connect" itemsDropdown={itemsDropdownConnect} />
         </nav>
       </div>
 
-      <div className="font-ubunto flex items-center gap-9 text-neutral-white">
+      <div className="font-ubunto flex items-center gap-9 text-neutral-white md:hidden">
         <button className="font-medium px-7 py-2 rounded-full border border-transparent hover:border-white transition-colors focus:outline-none focus:ring-2 focus:ring-gradient-red_100 focus:ring-offset-2 focus:ring-offset-gradient-red_500">
           Login
         </button>

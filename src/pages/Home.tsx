@@ -2,6 +2,10 @@ import { Header } from "../components/Header";
 import IllustrationEditor from "../assets/illustration-editor-desktop.svg";
 import IllustrationPhones from "../assets/illustration-phones.svg";
 import IllustrationLaptop from "../assets/illustration-laptop-desktop.svg";
+
+import IllustrationEditorMobile from "../assets/illustration-editor-mobile.svg";
+import IllustrationLaptopMobile from "../assets/illustration-laptop-mobile.svg";
+
 import { Footer } from "../components/Footer";
 
 export function Home() {
@@ -10,7 +14,7 @@ export function Home() {
       <div className="w-full h-[500px] relative ">
         <Header />
         <div className=" w-full h-full bg-primary-red_400 bg-[url(../assets/bg-pattern-intro-desktop.svg)] bg-no-repeat  bg-200% bg-center flex flex-col items-center justify-center text-neutral-white absolute top-0 rounded-bl-[100px]">
-          <h1 className="font-semibold text-6xl mb-4">
+          <h1 className="font-semibold  text-6xl md:text-4xl text-center  mb-4">
             A modern publishing platform
           </h1>
 
@@ -27,13 +31,13 @@ export function Home() {
         </div>
       </div>
 
-      <div className=" h-[700px] pt-20">
-        <h2 className="text-center text-primary-blue_900 text-4xl font-semibold">
+      <div className="h-full min-h-[700px] pt-20 md:text-center">
+        <h2 className="text-center text-primary-blue_900 text-4xl md:text-3xl font-semibold">
           Designed for the future
         </h2>
 
-        <div className="h-full flex items-center justify-center overflow-hidden">
-          <section className="w-[500px] flex flex-col gap-14 text-neutral-gray_800">
+        <div className="h-full flex items-center justify-center overflow-hidden md:flex-col-reverse md:overflow-visible">
+          <section className="max-w-[500px] flex flex-col gap-14 text-neutral-gray_800 md:justify-center md:items-center md:px-6">
             <div>
               <h3 className="text-primary-blue_900 text-xl font-semibold mb-4">
                 Introducing an extensible editor
@@ -60,20 +64,26 @@ export function Home() {
             </div>
           </section>
 
-          <section className="w-[500px] translate-x-60 ">
-            <img
-              src={IllustrationEditor}
-              alt="Illustration Editor"
-              className="w-[85%] h-[85%] block scale-150"
-            />
+          <section className="max-w-[500px] translate-x-60 md:translate-x-0 md:my-10">
+            <picture className="flex justify-center items-center">
+              <source
+                media="(max-width: 767px)"
+                srcSet={IllustrationEditorMobile}
+              />
+              <img
+                src={IllustrationEditor}
+                alt="Illustration Editor"
+                className="w-[85%] h-[85%] block scale-150 md:scale-100"
+              />
+            </picture>
           </section>
         </div>
       </div>
 
-      <div className="h-[400px] mt-20 flex items-center justify-center gap-10 bg-[url(../assets/bg-pattern-circles.svg)]  bg-no-repeat bg-left-bottom bg-gradient-blue_800 rounded-bl-[100px] rounded-tr-[100px]">
-        <img src={IllustrationPhones} alt="Phones" />
+      <div className="min-h-[400px] mt-20 flex items-center justify-center gap-10 bg-[url(../assets/bg-pattern-circles.svg)]  bg-no-repeat bg-left-bottom bg-gradient-blue_800 rounded-bl-[100px] rounded-tr-[100px] md:flex-col md:text-center md:pb-28 md:gap-0 md:mt-48 ">
+        <img src={IllustrationPhones} alt="Phones" className="md:-mt-32" />
 
-        <div className="max-w-[500px] text-white">
+        <div className="max-w-[500px] text-white md:px-6">
           <h2 className="font-semibold text-4xl mb-5">
             State of the Art Infrastructure
           </h2>
@@ -86,16 +96,22 @@ export function Home() {
         </div>
       </div>
 
-      <div className="h-[600px] flex items-center justify-center mt-20 mb-10">
-        <section className="w-[500px] -translate-x-60">
-          <img
-            src={IllustrationLaptop}
-            alt="Illustration Laptop"
-            className="w-[100%] h-[100%] block scale-150"
-          />
+      <div className="min-h-[600px] flex items-center justify-center mt-20 mb-10 md:flex-col md:mt-14 md:gap-6 md:mb-14">
+        <section className="max-w-[500px] -translate-x-60 md:-translate-x-0">
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcSet={IllustrationLaptopMobile}
+            />
+            <img
+              src={IllustrationLaptop}
+              alt="Illustration Laptop"
+              className="w-[100%] h-[100%] block scale-150 md:scale-100"
+            />
+          </picture>
         </section>
 
-        <section className="w-[500px] flex flex-col gap-14 text-neutral-gray_800">
+        <section className="max-w-[500px] flex flex-col gap-14 text-neutral-gray_800 md:px-6 md:text-center">
           <div>
             <h3 className="text-primary-blue_900 text-xl font-semibold mb-4">
               Free, open, simple
