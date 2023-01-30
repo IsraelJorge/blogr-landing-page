@@ -3,7 +3,7 @@ import { Home } from "./pages/Home";
 
 export function App() {
   return (
-    <div className="App">
+    <div className="App h-screen">
       <Home />
     </div>
   );

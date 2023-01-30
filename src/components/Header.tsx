@@ -26,10 +26,12 @@ export function Header() {
       </div>
 
       <div className="font-ubunto flex items-center gap-9 text-neutral-white">
-        <button className="font-medium">Login</button>
+        <button className="font-medium px-7 py-2 rounded-full border border-transparent hover:border-white transition-colors focus:outline-none focus:ring-2 focus:ring-gradient-red_100 focus:ring-offset-2 focus:ring-offset-gradient-red_500">
+          Login
+        </button>
         <button
           className=" bg-neutral-white text-primary-red_400 font-medium px-7 py-2 rounded-full 
-          hover:text-neutral-white hover:bg-red-300 transition-colors
+          hover:text-neutral-white hover:bg-red-300 transition-colors focus:outline-none focus:ring-2 focus:ring-gradient-red_100 focus:ring-offset-2 focus:ring-offset-gradient-red_500
         "
         >
           Sing Up
