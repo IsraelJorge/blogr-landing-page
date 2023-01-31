@@ -16,9 +16,9 @@ export function Header() {
   return (
     <header className="w-full max-w-[1000px] mx-auto py-10 flex justify-between relative z-10 lg:px-10">
       <div className="flex items-center gap-20">
-        <div>
+        <a href="#" className="block">
           <img src={Logo} alt="Logo da blorgr" />
-        </div>
+        </a>
         <nav className="flex items-center gap-5 lg:hidden">
           <ItemHeader title="Product" itemsDropdown={itemsDropdownProduct} />
           <ItemHeader title="Company" itemsDropdown={itemsDropdownCompany} />
