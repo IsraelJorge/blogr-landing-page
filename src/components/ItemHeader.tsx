@@ -1,5 +1,6 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import Arrow from "../assets/icon-arrow-light.svg";
+import { Menu, Transition } from "@headlessui/react";
 
 type ItemHeaderProps = {
   title: string;
@@ -8,34 +9,46 @@ type ItemHeaderProps = {
 
 export function ItemHeader({ title, itemsDropdown }: ItemHeaderProps) {
   return (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger className="flex items-center gap-2 cursor-pointer text-neutral-white font-ubunto font-semibold rounded-full p-1 hover:underline group text-base focus:outline-none focus:ring-2 focus:ring-gradient-red_100 focus:ring-offset-2 focus:ring-offset-gradient-red_500">
-        <p>{title}</p>
-        <img
-          src={Arrow}
-          alt="Arrow icon"
-          className="group-data-[state=open]:rotate-180 transition-all"
-        />
-      </DropdownMenu.Trigger>
+    <div>
+      <Menu as="div" className="relative">
+        <div>
+          <Menu.Button className="text-neutral-white font-ubunto font-semibold rounded-full p-1 hover:underline group text-base flex items-center gap-1 group">
+            {title}
+            <img
+              src={Arrow}
+              alt="Arrow icon"
+              className="group-data-[headlessui-state=open]:rotate-180 ml-1 transition-all"
+            />
+          </Menu.Button>
+        </div>
 
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content className="bg-neutral-white px-1 py-5 mt-4 rounded-md transition-all">
-          {itemsDropdown.map((item) => (
-            <DropdownMenu.Item
-              className="hover:outline-none"
-              key={item}
-              onSelect={() => alert(item)}
-            >
-              <a
-                href="#"
-                className="block py-1 px-6 font-ubunto hover:font-medium cursor-pointer "
-              >
-                {item}
-              </a>
-            </DropdownMenu.Item>
-          ))}
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-    </DropdownMenu.Root>
+        <Transition
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
+        >
+          <Menu.Items className="absolute flex flex-col mt-3 py-4 px-1 bg-white rounded-md focus:outline-none shadow-sm shadow-slate-800">
+            {itemsDropdown.map((item) => (
+              <Menu.Item key={item}>
+                {({ active }) => (
+                  <a
+                    className={`${
+                      active
+                        ? "bg-primary-red_300 text-white font-semibold"
+                        : "text-black"
+                    } cursor-pointer px-6 py-1 rounded-sm mb-1`}
+                  >
+                    {item}
+                  </a>
+                )}
+              </Menu.Item>
+            ))}
+          </Menu.Items>
+        </Transition>
+      </Menu>
+    </div>
   );
 }

@@ -31,7 +31,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="h-full min-h-[700px] pt-20 md:text-center">
+      <div className="h-full pt-20 md:text-center">
         <h2 className="text-center text-primary-blue_900 text-4xl md:text-3xl font-semibold">
           Designed for the future
         </h2>
@@ -80,7 +80,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="min-h-[400px] mt-20 flex items-center justify-center gap-10 bg-[url(../assets/bg-pattern-circles.svg)]  bg-no-repeat bg-left-bottom bg-gradient-blue_800 rounded-bl-[100px] rounded-tr-[100px] md:flex-col md:text-center md:pb-28 md:gap-0 md:mt-48 ">
+      <div className="h-[400px] md:h-auto mt-20 flex items-center justify-center gap-10 bg-[url(../assets/bg-pattern-circles.svg)]  bg-no-repeat bg-left-bottom bg-gradient-blue_800 rounded-bl-[100px] rounded-tr-[100px] md:flex-col md:text-center md:pb-28 md:gap-0 md:mt-48 ">
         <img src={IllustrationPhones} alt="Phones" className="md:-mt-32" />
 
         <div className="max-w-[500px] text-white md:px-6">

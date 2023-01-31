@@ -1,5 +1,6 @@
 import Logo from "../assets/logo.svg";
 import { ItemHeader } from "./ItemHeader";
+import { MenuHamburger } from "./MenuHamburger";
 
 export function Header() {
   const itemsDropdownConnect = ["Contact", "NewsLetter", "Linkedin"];
@@ -13,19 +14,19 @@ export function Header() {
   ];
 
   return (
-    <header className="w-full max-w-[1000px] mx-auto py-10 flex  justify-between relative z-10">
+    <header className="w-full max-w-[1000px] mx-auto py-10 flex justify-between relative z-10 lg:px-10">
       <div className="flex items-center gap-20">
         <div>
           <img src={Logo} alt="Logo da blorgr" />
         </div>
-        <nav className="flex items-center gap-5 md:hidden">
+        <nav className="flex items-center gap-5 lg:hidden">
           <ItemHeader title="Product" itemsDropdown={itemsDropdownProduct} />
           <ItemHeader title="Company" itemsDropdown={itemsDropdownCompany} />
           <ItemHeader title="Connect" itemsDropdown={itemsDropdownConnect} />
         </nav>
       </div>
 
-      <div className="font-ubunto flex items-center gap-9 text-neutral-white md:hidden">
+      <div className="font-ubunto flex items-center gap-9 text-neutral-white lg:hidden">
         <button className="font-medium px-7 py-2 rounded-full border border-transparent hover:border-white transition-colors focus:outline-none focus:ring-2 focus:ring-gradient-red_100 focus:ring-offset-2 focus:ring-offset-gradient-red_500">
           Login
         </button>
@@ -37,6 +38,8 @@ export function Header() {
           Sing Up
         </button>
       </div>
+
+      <MenuHamburger />
     </header>
   );
 }
