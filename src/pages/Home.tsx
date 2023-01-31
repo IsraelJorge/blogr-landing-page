@@ -13,7 +13,7 @@ export function Home() {
     <>
       <div className="w-full h-[500px] relative ">
         <Header />
-        <div className=" w-full h-full bg-primary-red_400 bg-[url(../assets/bg-pattern-intro-desktop.svg)] bg-no-repeat  bg-200% bg-center flex flex-col items-center justify-center text-neutral-white absolute top-0 rounded-bl-[100px]">
+        <div className=" w-full h-[500px] bg-primary-red_400 bg-[url(../assets/bg-pattern-intro-desktop.svg)] bg-no-repeat  bg-200% bg-center flex flex-col items-center justify-center text-neutral-white absolute top-0 rounded-bl-[100px]">
           <h1 className="font-semibold  text-6xl md:text-4xl text-center  mb-4">
             A modern publishing platform
           </h1>
