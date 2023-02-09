@@ -16,7 +16,7 @@ export function Footer() {
     <footer className="bg-neutral-gray_800 flex items-center justify-center py-11 text-white rounded-tr-[100px] font-ubunto ">
       <div className="w-[80%] flex md:flex-col md:items-center md:gap-8">
         <a href="#" className="block">
-          <img src={Logo} alt="Logo" className="w-[140px] h-full" />
+          <img src={Logo} alt="Logo" />
         </a>
 
         <div className="flex flex-1 justify-around md:flex-col md:justify-center md:items-center md:text-center md:gap-4">

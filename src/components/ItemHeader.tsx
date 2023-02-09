@@ -12,7 +12,7 @@ export function ItemHeader({ title, itemsDropdown }: ItemHeaderProps) {
     <div>
       <Menu as="div" className="relative">
         <div>
-          <Menu.Button className="text-neutral-white font-ubunto font-semibold rounded-full p-1 hover:underline group text-base flex items-center gap-1 group">
+          <Menu.Button className="text-neutral-white font-ubunto font-semibold rounded-full p-1 hover:underline group text-base flex items-center gap-1 group focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gradient-red_500">
             {title}
             <img
               src={Arrow}
@@ -30,7 +30,7 @@ export function ItemHeader({ title, itemsDropdown }: ItemHeaderProps) {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute flex flex-col mt-3 py-4 px-1 bg-white rounded-md focus:outline-none shadow-sm shadow-slate-800">
+          <Menu.Items className="absolute flex flex-col mt-3 py-4 px-1 bg-white rounded-md focus:outline-none shadow-2xl ">
             {itemsDropdown.map((item) => (
               <Menu.Item key={item}>
                 {({ active }) => (

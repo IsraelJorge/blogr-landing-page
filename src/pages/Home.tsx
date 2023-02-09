@@ -14,30 +14,30 @@ export function Home() {
       <div className="w-full h-[500px] relative ">
         <Header />
         <div className=" w-full h-[500px] bg-primary-red_400 bg-[url(../assets/bg-pattern-intro-desktop.svg)] bg-no-repeat  bg-200% bg-center flex flex-col items-center justify-center text-neutral-white absolute top-0 rounded-bl-[100px]">
-          <h1 className="font-semibold  text-6xl md:text-4xl text-center  mb-4">
+          <h1 className="font-semibold text-6xl md:text-4xl lg:text-5xl text-center mb-4">
             A modern publishing platform
           </h1>
 
           <h3> Grow your audience and build your online brand</h3>
 
           <div className="flex items-center justify-center gap-5 font-ubunto text-sm font-semibold mt-10">
-            <button className="bg-neutral-white text-primary-red_400 px-3 py-2 rounded-full hover:text-neutral-white hover:bg-red-300 transition-colors focus:outline-none focus:ring-2 focus:ring-gradient-red_100 focus:ring-offset-2 focus:ring-offset-gradient-red_500">
+            <button className="bg-neutral-white text-primary-red_400 px-3 py-2 rounded-full hover:text-neutral-white hover:bg-red-300 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gradient-red_500">
               Start for Free
             </button>
-            <button className="px-3 py-2 rounded-full border border-neutral-white hover:bg-neutral-white hover:text-red-300 transition-colors focus:outline-none focus:ring-2 focus:ring-gradient-red_100 focus:ring-offset-2 focus:ring-offset-gradient-red_500">
+            <button className="px-3 py-2 rounded-full border border-neutral-white hover:bg-neutral-white hover:text-red-300 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gradient-red_500">
               Learn More
             </button>
           </div>
         </div>
       </div>
 
-      <div className="h-full pt-20 md:text-center">
+      <div className=" pt-20 md:text-center lg:text-center lg:pb-10">
         <h2 className="text-center text-primary-blue_900 text-4xl md:text-3xl font-semibold">
           Designed for the future
         </h2>
 
-        <div className="h-full flex items-center justify-center overflow-hidden md:flex-col-reverse md:overflow-visible">
-          <section className="max-w-[500px] flex flex-col gap-14 text-neutral-gray_800 md:justify-center md:items-center md:px-6">
+        <div className="h-full flex items-center justify-center overflow-hidden md:flex-col-reverse md:overflow-visible lg:flex-col-reverse lg:overflow-visible">
+          <section className="max-w-[500px] flex flex-col gap-14 text-neutral-gray_800 md:justify-center md:items-center md:px-6 lg:justify-center lg:items-center">
             <div>
               <h3 className="text-primary-blue_900 text-xl font-semibold mb-4">
                 Introducing an extensible editor
@@ -64,24 +64,28 @@ export function Home() {
             </div>
           </section>
 
-          <section className="max-w-[500px] translate-x-60 md:translate-x-0 md:my-10">
+          <section className="max-w-[500px] translate-x-60 md:translate-x-0 md:my-10 lg:translate-x-0 lg:my-10">
             <picture className="flex justify-center items-center">
               <source
-                media="(max-width: 767px)"
+                media="(max-width: 1023px)"
                 srcSet={IllustrationEditorMobile}
               />
               <img
                 src={IllustrationEditor}
                 alt="Illustration Editor"
-                className="w-[85%] h-[85%] block scale-150 md:scale-100"
+                className="w-[85%] h-[85%] block scale-150 md:scale-100 lg:scale-100"
               />
             </picture>
           </section>
         </div>
       </div>
 
-      <div className="h-[400px] md:h-auto mt-20 flex items-center justify-center gap-10 bg-[url(../assets/bg-pattern-circles.svg)]  bg-no-repeat bg-left-bottom bg-gradient-blue_800 rounded-bl-[100px] rounded-tr-[100px] md:flex-col md:text-center md:pb-28 md:gap-0 md:mt-48 ">
-        <img src={IllustrationPhones} alt="Phones" className="md:-mt-32" />
+      <div className="h-[400px] md:h-auto lg:h-auto mt-20 flex items-center justify-center gap-10 bg-[url(../assets/bg-pattern-circles.svg)]  bg-no-repeat bg-left-bottom bg-gradient-blue_800 rounded-bl-[100px] rounded-tr-[100px] md:flex-col md:text-center md:pb-28 md:gap-0 md:mt-48 lg:flex-col lg:text-center lg:pb-20 lg:gap-0 lg:mt-36">
+        <img
+          src={IllustrationPhones}
+          alt="Phones"
+          className="md:-mt-32 lg:-mt-32"
+        />
 
         <div className="max-w-[500px] text-white md:px-6">
           <h2 className="font-semibold text-4xl mb-5">
@@ -96,22 +100,22 @@ export function Home() {
         </div>
       </div>
 
-      <div className="min-h-[600px] flex items-center justify-center mt-20 mb-10 md:flex-col md:mt-14 md:gap-6 md:mb-14">
-        <section className="max-w-[500px] -translate-x-60 md:-translate-x-0">
+      <div className="min-h-[600px] flex items-center justify-center mt-20 mb-10 md:flex-col md:mt-14 md:gap-6 md:mb-14 lg:flex-col lg:mt-14 lg:gap-6 lg:mb-14">
+        <section className="max-w-[500px] -translate-x-60 md:-translate-x-0 lg:-translate-x-0">
           <picture>
             <source
-              media="(max-width: 767px)"
+              media="(max-width: 1023px)"
               srcSet={IllustrationLaptopMobile}
             />
             <img
               src={IllustrationLaptop}
               alt="Illustration Laptop"
-              className="w-[100%] h-[100%] block scale-150 md:scale-100"
+              className="w-[100%] h-[100%] block scale-150 md:scale-100 lg:scale-100"
             />
           </picture>
         </section>
 
-        <section className="max-w-[500px] flex flex-col gap-14 text-neutral-gray_800 md:px-6 md:text-center">
+        <section className="max-w-[500px] flex flex-col gap-14 text-neutral-gray_800 md:px-6 md:text-center lg:text-center">
           <div>
             <h3 className="text-primary-blue_900 text-xl font-semibold mb-4">
               Free, open, simple

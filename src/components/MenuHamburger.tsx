@@ -1,4 +1,5 @@
 import { Menu, Transition, Disclosure } from "@headlessui/react";
+import { useState } from "react";
 import { ItemMenuHamburger } from "./ItemMenuHamburger";
 
 export function MenuHamburger() {
@@ -13,10 +14,10 @@ export function MenuHamburger() {
   ];
 
   return (
-    <div className="lg:flex items-center hidden ">
+    <div className="md:flex lg:flex items-center hidden ">
       <Menu as="div" className="relative">
         <div>
-          <Menu.Button className="group ">
+          <Menu.Button className="group">
             <div
               className="
       w-[40px]
@@ -60,15 +61,15 @@ export function MenuHamburger() {
           </Menu.Button>
         </div>
 
-        <Transition
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
+        <Transition.Root
+          enter="transition-all ease-in-out duration-700"
+          enterFrom="opacity-0 h-0 "
+          enterTo="opacity-100 h-full"
+          leave="transition-all ease-in-out duration-300"
+          leaveFrom="opacity-100 h-full "
+          leaveTo="opacity-0 h-0 "
         >
-          <Menu.Items className="absolute right-0 w-[calc(100vw-80px)]  bg-white rounded-md font-medium py-6 px-3 text-neutral-gray_800">
+          <Menu.Items className="absolute right-0 w-[calc(100vw-80px)]  bg-white rounded-md font-medium py-6 px-3 text-neutral-gray_800 shadow-2xl">
             <div className="flex flex-col items-center justify-center gap-4 text-center">
               <ItemMenuHamburger title="Product" items={itemsDropdownProduct} />
               <ItemMenuHamburger title="Company" items={itemsDropdownCompany} />
@@ -91,7 +92,7 @@ export function MenuHamburger() {
               </Menu.Item>
             </div>
           </Menu.Items>
-        </Transition>
+        </Transition.Root>
       </Menu>
     </div>
   );
