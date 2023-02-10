@@ -14,7 +14,7 @@ export function Header() {
   ];
 
   return (
-    <header className="w-full max-w-[1000px] mx-auto py-10 flex justify-between relative z-10 md: lg:px-10">
+    <header className="w-full max-w-[1000px] mx-auto py-10 flex justify-between relative z-10 md:px-10 lg:px-10">
       <div className="flex items-center gap-20">
         <a href="#" className="block">
           <img src={Logo} alt="Logo da blorgr" />
